@@ -3,9 +3,9 @@
 
 import csv
 import datetime
-import truck
-import package
-import hashtable
+import Truck
+import Package
+import Hashtable
 
 # This will load the required CSV files containing data
 with open("Data/address.csv") as CSV_address:
@@ -42,12 +42,12 @@ def loadPackageData(filename):
             pDeliveryTime = None
 
             #Inserting Package info into the hash
-            p = Packages(pID, pStreet, pCity, pState, pZip, pDeadline, pWeight, pNotes, pStatus, pDepartureTime, pDeliveryTime)
+            p = Package(pID, pStreet, pCity, pState, pZip, pDeadline, pWeight, pNotes, pStatus, pDepartureTime, pDeliveryTime)
             #print (p)
             packageHash.insert(pID, p)
 
 #Hash table for the packages
-packageHash = hashtable() 
+packageHash = Hashtable() 
 
 #finds the minimum distance for the next address
 def addresss(address):
@@ -68,9 +68,9 @@ def Betweenst(addy1,addy2):
 loadPackageData('CSVFiles/packageCSV.csv')
 
 #manually loading the trucks and assigning them a departure time
-truck1 = Trucks(18, 0.0, "4001 South 700 East", datetime.timedelta(hours=8),[1,13,14,15,16,19,20,27,29,30,31,34,37,40])
-truck2 = Trucks(18, 0.0, "4001 South 700 East", datetime.timedelta(hours=11),[2,3,4,5,9,18,26,28,32,35,36,38])
-truck3 = Trucks(18, 0.0, "4001 South 700 East", datetime.timedelta(hours=9, minutes=5),[6,7,8,10,11,12,17,21,22,23,24,25,33,39])
+truck1 = Truck(18, 0.0, "1234 ABC 123 XYZ", datetime.timedelta(hours=8),[1,13,14,15,16,19,20,27,29,30,31,34,37,40])
+truck2 = Truck(18, 0.0, "1234 ABC 123 XYZ", datetime.timedelta(hours=11),[2,3,4,5,9,18,26,28,32,35,36,38])
+truck3 = Truck(18, 0.0, "1234 ABC 123 XYZ", datetime.timedelta(hours=9, minutes=5),[6,7,8,10,11,12,17,21,22,23,24,25,33,39])
 
 
 #algorithm to deliver the packages on the truck
@@ -86,21 +86,21 @@ def truckDeliverPackages(truck):
     truck.packages.clear()
     #while there are packages left to be delivered the algorithm will run
     while len(enroute) > 0:
-        nextAddy = 2000
+        nextAddress = 2000
         nextPackage = None
         for package in enroute:
             if package.ID in [25, 6]:
                 nextPackage = package
-                nextAddy = Betweenst(addresss(truck.currentLocation), addresss(package.street))
+                nextAddress = Betweenst(addresss(truck.currentLocation), addresss(package.street))
                 break
-            if Betweenst(addresss(truck.currentLocation), addresss(package.street)) <= nextAddy:
+            if Betweenst(addresss(truck.currentLocation), addresss(package.street)) <= nextAddress:
                 nextAddy = Betweenst(addresss(truck.currentLocation), addresss(package.street))
                 nextPackage = package
         truck.packages.append(nextPackage.ID)    
         enroute.remove(nextPackage)
-        truck.miles += nextAddy
+        truck.miles += nextAddress
         truck.currentLocation = nextPackage.street
-        truck.time += datetime.timedelta(hours=nextAddy / 18)
+        truck.time += datetime.timedelta(hours=nextAddress / 18)
         nextPackage.deliveryTime = truck.time
         nextPackage.departureTime = truck.departTime
 
@@ -123,7 +123,7 @@ print("The fastest delivery service by truck")
 print ("The mileage for 3 trucks are:", (truck1.miles + truck2.miles + truck3.miles))
 
 while True:
-    
+
     #print(truck1.miles + truck2.miles + truck3.miles)
     #pazzazz
     userTime = input("Enter a time value in the Hour:Minute format to view the truck positions: ")

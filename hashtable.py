@@ -1,6 +1,6 @@
 #Creating the hash table
 #Source: W-1_ChainingHashTable_zyBooks_Key-Value.py
-class hashtable:
+class Hashtable:
     def __init__(self, initialcapacity=40):
         self.table = []
         for i in range(initialcapacity):
