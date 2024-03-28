@@ -4,15 +4,15 @@ from datetime import timedelta
 
 # Class that holds all the data that the truck will use
 class Truck:
-    def __init__(self, truck, package, distance, location, leave_time):
+    def __init__(self, truck, package, total_distance, location, leave_time):
         self.truck = truck
         self.package = package
-        self.distance = distance
+        self.total_distance = total_distance
         self.location = location
         self.leave_time = leave_time
 
     def __str__(self):
-        return '%s, %s, %s, %s, %s' % (self.truck, self.package, self.distance, self.location, self.leave_time)
+        return '%s, %s, %s, %s, %s' % (self.truck, self.package, self.total_distance, self.location, self.leave_time)
 
 
 '''
