@@ -19,13 +19,16 @@ class Package:
 
     # Holds the current state of the package
     # Users can check the current status of their delivery throughout the day
-    def set_pkg_status(self, time):
+    def set_pkg_state(self, time):
         # If the package has a delivery time before the current time, it's delivered
         if self.deliver_time < time:
             self.package_state = 'Delivered'
         # If the package is in a truck before the current time, it's on track to be delivered
         elif self.leave_time < time:
             self.package_state = 'Out for delivery'
+        # Error check placeholder
+        elif self.leave_time > 9999999:
+            self.package_state = 'ERROR'
         # Otherwise the package is still at the center and not on a vehicle
         else:
             self.package_state = 'Awaiting shipping'
