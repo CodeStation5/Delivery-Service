@@ -10,6 +10,16 @@ from Package import Package
 from Truck import Truck
 import os
 
+
+# User interface to print out information and allow user input
+def user_interface():
+    print('\n(っ◕‿◕)っ Welcome to the package delivery service! Choose from the following options to print (1-4)')
+    print('1 - Every package and the distance each truck traveled')
+    print('2 - The status of a package at a given time')
+    print('3 - The status of every package at a given time')
+    print('4 - Exit')
+
+
 # This will load the required CSV files containing data for addresses and distances
 with open("Dataset/Address.csv") as CSV_address:
     AddressCSV = csv.reader(CSV_address)
@@ -62,6 +72,11 @@ def pkg_get(pkg_track, cur_time=datetime.timedelta(hours=20)):
     package = pkg_hashtable.search(pkg_track)
     package.set_status(cur_time)
     print(str(package))
+
+
+# Print headings for each package in a specific format
+def pkg_info_printer():
+    print('PackageID, Address, City, State, AreaCode, Deadline, Weight, Comments, Status, Departed, Delivered')
 
 
 # All information about each package is stored in the pkg_hashtable
@@ -172,7 +187,8 @@ def delivery_function(truck):
                 # This will mean that packages delivery address will be the trucks new target
                 addr_near = pkg_how_far
                 pkg_near = package
-
+        # time_var is a placeholder value
+        time_var = 0
         # The nearest package will be assigned to a truck
         truck.packages.append(pkg_near.pkg_track)
         # Remove the package from the temporary list as it will no longer need to be sorted
@@ -183,117 +199,81 @@ def delivery_function(truck):
         truck.addr_now = pkg_near.address
         # Add the miles traveled by the truck to the running total
         truck.total_distance += addr_near
-        # set package arrival to truck's arrival time; package is now delivered and truck is departing
-        truck.truck_depart += datetime.timedelta(hours=addr_near / 18)
+        # Package and truck will have the same times implying delivery
+        truck.truck_depart += datetime.timedelta(hours=addr_near / 18 + time_var)
+        # Trucks leave time from location is when the package is delivered
         pkg_near.arrive = truck.truck_depart
 
 
-# User interface to print out information and allow user input
-def user_interface():
-    print()
-    print('~~~~~~~~~~~~~~~~~~~~~~')
-    print('(っ◕‿◕)っ Welcome to the package delivery service! Choose from the following options to print (1-4):')
-    print('1 - Every package and the distance each truck traveled')
-    print('2 - The status of a package at a given time')
-    print('3 - The status of every package at a given time')
-    print('4 - Exit')
-    print('~~~~~~~~~~~~~~~~~~~~~~')
-
-
-# print_package_header() - print header for packages; makes the main program code cleaner
-def pkg_info_printer():
-    print('Pkg_Id, Address, City, State, ZipCode, Deadline, Weight, Notes, Status, Departure Time, Arrival Time')
-    print('****************************************************************************************************')
-
-
 class Program:
-    # Create truck instances; previous runs show that truck 1 finishes by 930, so assigning truck 3 to start 1 hour later
-    # Could potentially modify Truck class to track their last package delivery time to assign that as the start time for truck3
-    truck1 = Truck(1, [], 0, '4001 South 700 East', datetime.timedelta(hours=8))
-    truck2 = Truck(2, [], 0, '4001 South 700 East', datetime.timedelta(hours=9, minutes=5))
-    truck3 = Truck(3, [], 0, '4001 South 700 East', datetime.timedelta(hours=10, minutes=30))
+    pkg_truck_run1 = Truck(1, [], 0, '4001 South 700 East', datetime.timedelta(hours=8))
+    pkg_truck_run2 = Truck(2, [], 0, '4001 South 700 East', datetime.timedelta(hours=9, minutes=5))
+    pkg_truck_run3 = Truck(3, [], 0, '4001 South 700 East', datetime.timedelta(hours=10, minutes=30))
 
     # Load trucks
-    truck1.packages, truck2.packages, truck3.packages = pkg_on_truck()
+    pkg_truck_run1.packages, pkg_truck_run2.packages, pkg_truck_run3.packages = pkg_on_truck()
 
-    # Simulate truck deliveries
-    delivery_function(truck1)
-    delivery_function(truck2)
-    delivery_function(truck3)
-
-    ## Debugging check
-    # print('Truck1: ' + str(truck1))
-    # print('Truck2: ' + str(truck2))
-    # print('Truck3: ' + str(truck3))
+    # Runs a delivery route for 3 trucks
+    delivery_function(pkg_truck_run1)
+    delivery_function(pkg_truck_run2)
+    delivery_function(pkg_truck_run3)
+    # More truck runs can be added
 
     # Beginning of user interaction; prompt loops until the user chooses valid input (including exit)
     while True:
+        # Runs the user ui routine that offers users options to choose from
         user_interface()
-
-        choice = input('Please select your desired option: ')
-
-        if choice == '1':  # Print all packages, assuming "end of shift" time of 1700, allowing for 0800-1700 window for deliveries
-            print()
-            print('Displaying ALL package statuses by the end of the business day (1700): ')
-            print('Truck1: ' + str(truck1.total_distance) + ' miles total. ')
+        # Takes in user input from the user ui options given
+        option = input('Option: ')
+        # Prints to screen the status of packages and the distance traveled in miles
+        if option == '1':
+            print('\nStatus of all packages: ')
+            print('\n1st truck: ' + str(pkg_truck_run1.total_distance) + ' miles of distance traveled ')
             pkg_info_printer()
-
-            for pkg_track in truck1.packages:
+            for pkg_track in pkg_truck_run1.packages:
+                pkg_get(pkg_track, datetime.timedelta(hours=17))
+            print('\nTruck2: ' + str(pkg_truck_run2.total_distance) + ' miles of distance traveled ')
+            pkg_info_printer()
+            for pkg_track in pkg_truck_run2.packages:
+                pkg_get(pkg_track, datetime.timedelta(hours=17))
+            print('\nTruck3: ' + str(pkg_truck_run3.total_distance) + ' miles of distance traveled ')
+            pkg_info_printer()
+            for pkg_track in pkg_truck_run3.packages:
                 pkg_get(pkg_track, datetime.timedelta(hours=17))
 
-            print()
-            print('Truck2: ' + str(truck2.total_distance) + ' miles total. ')
-            pkg_info_printer()
-
-            for pkg_track in truck2.packages:
-                pkg_get(pkg_track, datetime.timedelta(hours=17))
-
-            print()
-            print('Truck3: ' + str(truck3.total_distance) + ' miles total. ')
-            pkg_info_printer()
-
-            for pkg_track in truck3.packages:
-                pkg_get(pkg_track, datetime.timedelta(hours=17))
-
-        elif choice == '2':  # Print one package's status at a specified time
-            print()
-            pkg_track = int(input('Please select your desired package: '))
+        elif option == '2':  # Print one package's status at a specified time
+            pkg_track = int(input('\nPlease select your desired package: '))
             package = pkg_hashtable.search(choice)
 
             choice = input('Please specify your time (HH:MM:SS) : ')
             (h, m, s) = choice.split(':')
 
-            print()
-            print(f'Displaying package {pkg_track} at the time ({h}:{m}:{s})')
+            print(f'\nDisplaying package {pkg_track} at the time ({h}:{m}:{s})')
             pkg_info_printer()
             pkg_get(pkg_track, datetime.timedelta(hours=int(h), minutes=int(m), seconds=int(s)))
 
-        elif choice == '3':  # Print ALL packages' status at a specified time
-            print()
-            choice = input('Please specify your time (HH:MM:SS) : ')
+        elif option == '3':  # Print ALL packages' status at a specified time
+            choice = input('\nPlease specify your time (HH:MM:SS) : ')
             (h, m, s) = choice.split(':')
-            print()
-            print(f'Displaying all packages at the time ({h}:{m}:{s})')
-            print()
-            print('Truck1: ' + str(truck1.total_distance) + ' miles total. ')
+            print(f'\nDisplaying all packages at the time ({h}:{m}:{s})')
+            print('\nTruck1: ' + str(pkg_truck_run1.total_distance) + ' miles of distance traveled ')
             pkg_info_printer()
 
-            for pkg_track in truck1.packages:
+            for pkg_track in pkg_truck_run1.packages:
                 pkg_get(pkg_track, datetime.timedelta(hours=int(h), minutes=int(m), seconds=int(s)))
 
-            print()
-            print('Truck2: ' + str(truck2.total_distance) + ' miles total. ')
+            print('\nTruck2: ' + str(pkg_truck_run2.total_distance) + ' miles of distance traveled ')
             pkg_info_printer()
 
-            for pkg_track in truck2.packages:
+            for pkg_track in pkg_truck_run2.packages:
                 pkg_get(pkg_track, datetime.timedelta(hours=int(h), minutes=int(m), seconds=int(s)))
 
-            print()
-            print('Truck3: ' + str(truck3.total_distance) + ' miles total. ')
+            print('\nTruck3: ' + str(pkg_truck_run3.total_distance) + ' miles of distance traveled ')
             pkg_info_printer()
 
-            for pkg_track in truck3.packages:
+            for pkg_track in pkg_truck_run3.packages:
                 pkg_get(pkg_track, datetime.timedelta(hours=int(h), minutes=int(m), seconds=int(s)))
-
-        elif choice == '4':  # Exit request
+        # Exits the program
+        elif option == '4':
+            print('\nThe program will now exit')
             exit()
