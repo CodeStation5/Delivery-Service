@@ -209,6 +209,7 @@ def delivery_function(truck):
 
 
 class Program:
+    # Create a trial run of all 3 trucks
     pkg_truck_run1 = Truck(1, [], 0, '4001 South 700 East', datetime.timedelta(hours=8))
     pkg_truck_run2 = Truck(2, [], 0, '4001 South 700 East', datetime.timedelta(hours=9, minutes=5))
     pkg_truck_run3 = Truck(3, [], 0, '4001 South 700 East', datetime.timedelta(hours=10, minutes=30))
