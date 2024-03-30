@@ -51,3 +51,10 @@ class HashTable:
             # print (key_value)
             if kv[0] == key:
                 bucket_list.remove([kv[0], kv[1]])
+
+
+'''
+***Extra Notes***
+Refer to the heading about almost all the code in the Hashtable.py class being taken from WGU created code, file
+W-1_ChainingHashTable_zyBooks_Key-Value.py
+'''
