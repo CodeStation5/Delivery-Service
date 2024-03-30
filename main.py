@@ -51,7 +51,7 @@ def space_between(src, dst):
 
 # Collect package information from Package.csv
 def pkg_loader(pkg_hashtable):
-    with open("data/Package.csv") as CSV_package:
+    with open("Dataset/Package.csv") as CSV_package:
         info_package = csv.reader(CSV_package)
         for info in info_package:
             status = "Awaiting shipment"

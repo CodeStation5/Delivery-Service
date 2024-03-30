@@ -1,6 +1,3 @@
-import datetime
-from datetime import timedelta
-
 
 # Class that holds all the data that the truck will use
 class Truck:

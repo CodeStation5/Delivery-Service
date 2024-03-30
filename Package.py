@@ -1,5 +1,3 @@
-import datetime
-
 
 # Holds the class information for packages
 class Package:

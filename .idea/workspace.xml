@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5256cc32-93fc-442a-8600-7e64a34e9c44" name="Changes" comment="Changed note messages for pkg_holder">
+    <list default="true" id="5256cc32-93fc-442a-8600-7e64a34e9c44" name="Changes" comment="Added comments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dataset/Package.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Dataset/Package.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hashtable.py" beforeDir="false" afterPath="$PROJECT_DIR$/Hashtable.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Package.py" beforeDir="false" afterPath="$PROJECT_DIR$/Package.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Truck.py" beforeDir="false" afterPath="$PROJECT_DIR$/Truck.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +57,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.Hashtable.executor": "Run",
+    "Python.Package.executor": "Run",
+    "Python.Truck.executor": "Run",
+    "Python.main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -90,7 +91,7 @@
       <workItem from="1707999701732" duration="641000" />
       <workItem from="1708000351950" duration="166000" />
       <workItem from="1708216331220" duration="35000" />
-      <workItem from="1711521168151" duration="27472000" />
+      <workItem from="1711521168151" duration="29208000" />
     </task>
     <task id="LOCAL-00001" summary="Added base files">
       <option name="closed" value="true" />
@@ -220,7 +221,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711771910627</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Added comments">
+      <option name="closed" value="true" />
+      <created>1711773377188</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1711773377188</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +251,13 @@
     <MESSAGE value="created base file" />
     <MESSAGE value="Added dataset files" />
     <MESSAGE value="Changed note messages for pkg_holder" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed note messages for pkg_holder" />
+    <MESSAGE value="Added comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added comments" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Delivery_Service$main.coverage" NAME="main Coverage Results" MODIFIED="1711785077683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Delivery_Service$Package.coverage" NAME="Package Coverage Results" MODIFIED="1711785073414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Delivery_Service$Hashtable.coverage" NAME="Hashtable Coverage Results" MODIFIED="1711785075461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Delivery_Service$Truck.coverage" NAME="Truck Coverage Results" MODIFIED="1711785069870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
