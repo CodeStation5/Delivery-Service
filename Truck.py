@@ -11,6 +11,7 @@ class Truck:
         self.addr_now = addr_now
         self.truck_depart = truck_depart
 
+    # Defining the truck function to be used in the main class with placeholder values
     def __str__(self):
         return '%s, %s, %s, %s, %s' % (self.truck, self.packages, self.total_distance, self.addr_now, self.truck_depart)
 

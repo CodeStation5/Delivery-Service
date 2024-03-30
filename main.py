@@ -8,7 +8,6 @@ import csv
 from Hashtable import HashTable
 from Package import Package
 from Truck import Truck
-import os
 
 # time_var is a placeholder value
 time_var = 0

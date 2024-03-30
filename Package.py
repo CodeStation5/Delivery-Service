@@ -1,8 +1,7 @@
 import datetime
 
+
 # Holds the class information for packages
-
-
 class Package:
     def __init__(self, package, address, city, state, postal_code, deadline, comment,
                  package_state, leave_time, deliver_time):
@@ -33,6 +32,7 @@ class Package:
         else:
             self.package_state = 'Awaiting shipping'
 
+    # Defining the truck function to be used in the main class with placeholder values
     def __str__(self):
         return '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s' % (self.package, self.address, self.city,
                                                            self.state, self.postal_code, self.deadline,
