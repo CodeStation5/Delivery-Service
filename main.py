@@ -67,7 +67,6 @@ def pkg_loader(pkg_hashtable):
             pkg_dl = info[5]
             package = Package(pkg_info, pkg_addr, pkg_city, pkg_state, zipcode, pkg_dl,
                               pkg_comment, status, leave_time, delivered_time)
-
             pkg_hashtable.insert(pkg_info, package)
 
 
@@ -112,19 +111,24 @@ def pkg_on_truck():
         # The hashtable is searched for package ID information
         packages.append(pkg_hashtable.search(pkg_track))
 
-    # $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-    # $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+    # Choose which truck a package will ship on
     for pkg_holder in packages:
-        if pkg_holder.comment == 'DELAYED_905':
+        # If 9:05 delay, then ship on 2nd truck
+        if pkg_holder.comment == '905delay':
             pkg_truck2.append(pkg_holder)
-        elif pkg_holder.comment == 'DELAYED_1020':
+        # If delayed due to label error then ship on 3rd truck (last)
+        elif pkg_holder.comment == 'delay_again':
             pkg_truck3.append(pkg_holder)
-        elif pkg_holder.comment == 'GROUP':
+        # Packages that ship together will ship early on the 1st truck
+        elif pkg_holder.comment == 'together':
             pkg_truck1.append(pkg_holder)
+        # Packages with End of Day go on 1st truck to ensure they get delivered
         elif pkg_holder.deadline != 'EOD':
             pkg_truck1.append(pkg_holder)
-        elif pkg_holder.comment == 'TRUCK2':
+        # For packages that have a requirement to ship on truck 2
+        elif pkg_holder.comment == '2ndtruck':
             pkg_truck2.append(pkg_holder)
+        # Packages that don't have anywhere to go are temporarily held
         else:
             packages_extra.append(pkg_holder)
 
