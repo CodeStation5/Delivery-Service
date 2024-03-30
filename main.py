@@ -72,7 +72,7 @@ def pkg_loader(pkg_hashtable):
 # Collect information about the package to get details on its status
 def pkg_get(pkg_track, cur_time=datetime.timedelta(hours=20)):
     package = pkg_hashtable.search(pkg_track)
-    package.set_status(cur_time)
+    package.set_pkg_state(cur_time)
     print(str(package))
 
 
@@ -196,7 +196,7 @@ def delivery_function(truck):
                 pkg_near = package
 
         # The nearest package will be assigned to a truck
-        truck.packages.append(pkg_near.pkg_track)
+        truck.packages.append(pkg_near.package)
         # Remove the package from the temporary list as it will no longer need to be sorted
         sorting_list.remove(pkg_near)
         # Truck will now head to the nearest delivery address
