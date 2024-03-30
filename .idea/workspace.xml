@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5256cc32-93fc-442a-8600-7e64a34e9c44" name="Changes" comment="created base file" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;CodeStation5&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="1ed396e0-c0cd-4638-bab0-38b0002cdfbe" />
+        <option name="url" value="https://github.com/CodeStation5/Delivery-Service.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2cP454140pQUwPzKXMHm2wV9BC3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-50da183f06c8-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13135.95" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5256cc32-93fc-442a-8600-7e64a34e9c44" name="Changes" comment="" />
+      <created>1707999693639</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1707999693639</updated>
+      <workItem from="1707999701732" duration="641000" />
+      <workItem from="1708000351950" duration="166000" />
+      <workItem from="1708216331220" duration="35000" />
+      <workItem from="1711521168151" duration="25079000" />
+    </task>
+    <task id="LOCAL-00001" summary="Added base files">
+      <option name="closed" value="true" />
+      <created>1707999978039</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707999978039</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added base files">
+      <option name="closed" value="true" />
+      <created>1711521817653</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711521817653</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added refactored code">
+      <option name="closed" value="true" />
+      <created>1711525517285</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711525517285</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add wgu source code for hash table">
+      <option name="closed" value="true" />
+      <created>1711527007032</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711527007032</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add error check to pkg state">
+      <option name="closed" value="true" />
+      <created>1711593560871</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1711593560871</updated>
+    </task>
+    <task id="LOCAL-00006" summary="renamed distance to total_distance, reflect main.py">
+      <option name="closed" value="true" />
+      <created>1711599114799</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1711599114799</updated>
+    </task>
+    <task id="LOCAL-00007" summary="rename class objects to be clearer">
+      <option name="closed" value="true" />
+      <created>1711599400296</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1711599400296</updated>
+    </task>
+    <task id="LOCAL-00008" summary="create base code to run application">
+      <option name="closed" value="true" />
+      <created>1711600717359</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1711600717359</updated>
+    </task>
+    <task id="LOCAL-00009" summary="renamed package object to packages">
+      <option name="closed" value="true" />
+      <created>1711756376554</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1711756376554</updated>
+    </task>
+    <task id="LOCAL-00010" summary="renamed variables and added user ui routine">
+      <option name="closed" value="true" />
+      <created>1711756405075</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1711756405075</updated>
+    </task>
+    <task id="LOCAL-00011" summary="made changes to timedelta variables">
+      <option name="closed" value="true" />
+      <created>1711770049943</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1711770049943</updated>
+    </task>
+    <task id="LOCAL-00012" summary="added comments regarding wgu code use">
+      <option name="closed" value="true" />
+      <created>1711770065994</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1711770065994</updated>
+    </task>
+    <task id="LOCAL-00013" summary="added comments">
+      <option name="closed" value="true" />
+      <created>1711770565601</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1711770565601</updated>
+    </task>
+    <task id="LOCAL-00014" summary="created base file">
+      <option name="closed" value="true" />
+      <created>1711770576108</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1711770576108</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added base files" />
+    <MESSAGE value="Added refactored code" />
+    <MESSAGE value="Add wgu source code for hash table" />
+    <MESSAGE value="Add error check to pkg state" />
+    <MESSAGE value="renamed distance to total_distance, reflect main.py" />
+    <MESSAGE value="rename class objects to be clearer" />
+    <MESSAGE value="create base code to run application" />
+    <MESSAGE value="renamed package object to packages" />
+    <MESSAGE value="renamed variables and added user ui routine" />
+    <MESSAGE value="made changes to timedelta variables" />
+    <MESSAGE value="added comments regarding wgu code use" />
+    <MESSAGE value="added comments" />
+    <MESSAGE value="created base file" />
+    <option name="LAST_COMMIT_MESSAGE" value="created base file" />
+  </component>
+</project>
