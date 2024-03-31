@@ -24,8 +24,8 @@ class Package:
             self.package_state = 'Out for delivery'
         # Otherwise the package is still at the center and not on a vehicle
         # Error check placeholder
-        elif self.leave_time > 9999999:
-            self.package_state = 'ERROR'
+        # elif self.leave_time > 9999999:
+        #   self.package_state = 'ERROR'
         # If no other option then package is still at hub waiting to ship
         else:
             self.package_state = 'Awaiting shipping'
