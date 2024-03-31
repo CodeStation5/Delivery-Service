@@ -70,7 +70,7 @@ def pkg_loader(pkg_hashtable):
 
 
 # Collect information about the package to get details on its status
-def pkg_get(pkg_track, cur_time=datetime.timedelta(hours=20)):
+def pkg_get(pkg_track, cur_time=datetime.timedelta(hours=17)):
     package = pkg_hashtable.search(pkg_track)
     package.set_pkg_state(cur_time)
     print(str(package))
@@ -135,7 +135,7 @@ def pkg_on_truck():
     for pkg_holder in packages_extra:
         for assigned_package in pkg_truck1:
             # Make sure the distance is less than 2.1 and truck has less than 16 packages
-            if space_between(assigned_package.address, pkg_holder.address) < 2.1 and len(pkg_truck1) < 16:
+            if space_between(assigned_package.address, pkg_holder.address) < 2.0 and len(pkg_truck1) < 16:
                 # Assign the temporary package to truck 1
                 pkg_truck1.append(pkg_holder)
                 # Remove the package from the temporary holder
@@ -146,7 +146,7 @@ def pkg_on_truck():
     for pkg_holder in packages_extra:
         for assigned_package in pkg_truck2:
             # Make sure the distance is less than 2.1 and truck has less than 16 packages
-            if space_between(assigned_package.address, pkg_holder.address) < 2.1 and len(pkg_truck2) < 16:
+            if space_between(assigned_package.address, pkg_holder.address) < 2.0 and len(pkg_truck2) < 16:
                 # Assign the temporary package to truck 1
                 pkg_truck2.append(pkg_holder)
                 # Remove the package from the temporary holder
@@ -182,7 +182,7 @@ def delivery_function(truck):
     while len(sorting_list) > 0:
         # Temporary values
         # Holds the nearest address to the truck
-        addr_near = 1000
+        addr_near = 999
         # Holds the nearest package to that address
         pkg_near = None
 
@@ -297,4 +297,4 @@ class Program:
             exit()
         # If 1-4 is not chosen as an option, gives user an error message
         else:
-            print('\nInvalid option chosen. Try again')
+            print('\nInvalid option chosen. Please try again')
