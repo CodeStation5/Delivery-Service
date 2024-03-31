@@ -297,4 +297,4 @@ class Program:
             exit()
         # If 1-4 is not chosen as an option, gives user an error message
         else:
-            print('Invalid option chosen')
+            print('\nInvalid option chosen. Try again')
