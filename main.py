@@ -206,7 +206,7 @@ def delivery_function(truck):
         # The trucks current address is the package delivery address
         truck.addr_now = pkg_near.address
         # Add the miles traveled by the truck to the running total
-        truck.total_distance += addr_near
+        truck.total_distance += int(addr_near)
         # Package and truck will have the same times implying delivery
         truck.truck_depart += datetime.timedelta(hours=addr_near / 18)
         # Trucks leave time from location is when the package is delivered
