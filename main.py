@@ -15,12 +15,14 @@ time_var = 0
 
 # User interface to print out information and allow user input
 def user_interface():
-    print('\n(っ◕‿◕)っ Welcome to the package delivery service! Choose from the following options to print (1-4)')
+    print('\n////////////////////////////////////////////////////////////////////////////////////////////////////////')
+    print('(っ◕‿◕)っ Welcome to the package delivery service! Choose from the following options to print (1-4)')
     print('1 - Every package and the distance each truck traveled')
     print('2 - The status of a package at a given time')
     print('3 - The status of every package at a given time')
     print('4 - Exit')
     print('***NOTE that time must be entered in the format HH:MM:SS for this program***')
+    print('////////////////////////////////////////////////////////////////////////////////////////////////////////')
 
 
 # This will load the required CSV files containing data for addresses and distances
@@ -213,9 +215,9 @@ def delivery_function(truck):
 
 class Program:
     # Create a trial run of all 3 trucks
-    pkg_truck_run1 = Truck(1, [], 0, '4001 South 700 East', datetime.timedelta(hours=8))
-    pkg_truck_run2 = Truck(2, [], 0, '4001 South 700 East', datetime.timedelta(hours=9, minutes=5))
-    pkg_truck_run3 = Truck(3, [], 0, '4001 South 700 East', datetime.timedelta(hours=10, minutes=30))
+    pkg_truck_run1 = Truck(1, [], 0, '4001 South 700 East', datetime.timedelta(hours=7, minutes=1))
+    pkg_truck_run2 = Truck(2, [], 0, '4001 South 700 East', datetime.timedelta(hours=8, minutes=6))
+    pkg_truck_run3 = Truck(3, [], 0, '4001 South 700 East', datetime.timedelta(hours=9, minutes=32))
 
     # Load trucks
     pkg_truck_run1.packages, pkg_truck_run2.packages, pkg_truck_run3.packages = pkg_on_truck()

@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5256cc32-93fc-442a-8600-7e64a34e9c44" name="Changes" comment="renamed .arrive object signifier to deliver_time">
+    <list default="true" id="5256cc32-93fc-442a-8600-7e64a34e9c44" name="Changes" comment="edited dataset files for clarity">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dataset/Address.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Dataset/Address.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dataset/Distance.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dataset/Package.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Package.py" beforeDir="false" afterPath="$PROJECT_DIR$/Package.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +90,7 @@
       <workItem from="1707999701732" duration="641000" />
       <workItem from="1708000351950" duration="166000" />
       <workItem from="1708216331220" duration="35000" />
-      <workItem from="1711521168151" duration="33922000" />
+      <workItem from="1711521168151" duration="34926000" />
     </task>
     <task id="LOCAL-00001" summary="Added base files">
       <option name="closed" value="true" />
@@ -272,14 +268,53 @@
       <option name="project" value="LOCAL" />
       <updated>1711874037657</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="renamed .depart object signifier to deliver_time">
+      <option name="closed" value="true" />
+      <created>1711874385223</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1711874385223</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Edited comments">
+      <option name="closed" value="true" />
+      <created>1711874477224</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1711874477224</updated>
+    </task>
+    <task id="LOCAL-00025" summary="renamed time variables">
+      <option name="closed" value="true" />
+      <created>1711874713648</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1711874713648</updated>
+    </task>
+    <task id="LOCAL-00026" summary="commented out elif error for time outside range">
+      <option name="closed" value="true" />
+      <created>1711874746807</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1711874746807</updated>
+    </task>
+    <task id="LOCAL-00027" summary="edited dataset files for clarity">
+      <option name="closed" value="true" />
+      <created>1711874769971</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1711874769971</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added base files" />
     <MESSAGE value="Added refactored code" />
     <MESSAGE value="Add wgu source code for hash table" />
     <MESSAGE value="Add error check to pkg state" />
@@ -300,12 +335,17 @@
     <MESSAGE value="Changed wording in user input error routine" />
     <MESSAGE value="Re-adjusted distance value from 2.1 to 2.0" />
     <MESSAGE value="renamed .arrive object signifier to deliver_time" />
-    <option name="LAST_COMMIT_MESSAGE" value="renamed .arrive object signifier to deliver_time" />
+    <MESSAGE value="renamed .depart object signifier to deliver_time" />
+    <MESSAGE value="Edited comments" />
+    <MESSAGE value="renamed time variables" />
+    <MESSAGE value="commented out elif error for time outside range" />
+    <MESSAGE value="edited dataset files for clarity" />
+    <option name="LAST_COMMIT_MESSAGE" value="edited dataset files for clarity" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Delivery_Service$main.coverage" NAME="main Coverage Results" MODIFIED="1711874091099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Delivery_Service$main.coverage" NAME="main Coverage Results" MODIFIED="1711875291436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Delivery_Service$Hashtable.coverage" NAME="Hashtable Coverage Results" MODIFIED="1711785075461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Delivery_Service$Package.coverage" NAME="Package Coverage Results" MODIFIED="1711872594511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Delivery_Service$Package.coverage" NAME="Package Coverage Results" MODIFIED="1711874816940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Delivery_Service$Truck.coverage" NAME="Truck Coverage Results" MODIFIED="1711785069870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
