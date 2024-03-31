@@ -206,9 +206,9 @@ def delivery_function(truck):
         # Add the miles traveled by the truck to the running total
         truck.total_distance += addr_near
         # Package and truck will have the same times implying delivery
-        truck.truck_depart += datetime.timedelta(hours=addr_near / 18 + time_var)
+        truck.truck_depart += datetime.timedelta(hours=addr_near / 18)
         # Trucks leave time from location is when the package is delivered
-        pkg_near.arrive = truck.truck_depart
+        pkg_near.deliver_time = truck.truck_depart
 
 
 class Program:
@@ -240,19 +240,19 @@ class Program:
             pkg_info_printer()
             # For each package in the trucks package log, get its information
             for pkg_track in pkg_truck_run1.packages:
-                pkg_get(pkg_track, datetime.timedelta(hours=17 + time_var))
+                pkg_get(pkg_track, datetime.timedelta(hours=17))
             print('\nTruck2: ' + str(pkg_truck_run2.total_distance) + ' miles of distance traveled ')
             # print package header
             pkg_info_printer()
             # For each package in the trucks package log, get its information
             for pkg_track in pkg_truck_run2.packages:
-                pkg_get(pkg_track, datetime.timedelta(hours=17 + time_var))
+                pkg_get(pkg_track, datetime.timedelta(hours=17))
             print('\nTruck3: ' + str(pkg_truck_run3.total_distance) + ' miles of distance traveled ')
             # print package header
             pkg_info_printer()
             # For each package in the trucks package log, get its information
             for pkg_track in pkg_truck_run3.packages:
-                pkg_get(pkg_track, datetime.timedelta(hours=17 + time_var))
+                pkg_get(pkg_track, datetime.timedelta(hours=17))
 
         # Prints to screen the status of 1 package at a given time
         elif option == '2':
@@ -260,41 +260,42 @@ class Program:
             package = pkg_hashtable.search(option)
             option = input('Enter the time you want to see: ')
             # Splits the time entered by the user with ':' as the seperator
-            (hour, min, sec) = option.split(':')
-            print(f'\nPackage {pkg_track} at ({hour}:{min}:{sec}) is as follows...')
+            (h, m, s) = option.split(':')
+            print(f'\nPackage {pkg_track} at ({h}:{m}:{s}) is as follows...')
             # print package header
             pkg_info_printer()
-            pkg_get(pkg_track, datetime.timedelta(hours=int(hour), minutes=int(min), seconds=int(sec)))
+            pkg_get(pkg_track, datetime.timedelta(hours=int(h), minutes=int(m), seconds=int(s)))
 
         # Prints to screen the status of all packages at a given time
         elif option == '3':
             option = input('\nEnter a time to see all packages at that time : ')
             # Splits the time entered by the user with ':' as the seperator
-            (hour, min, sec) = option.split(':')
-            print(f'\nHere are all the packages at the time your entered, ({hour}:{min}:{sec})')
+            (h, m, s) = option.split(':')
+            print(f'\nHere are all the packages at the time your entered, ({h}:{m}:{s})')
             print('\n1st truck: ' + str(pkg_truck_run1.total_distance) + ' miles of distance traveled ')
             # print package header
             pkg_info_printer()
             # For each package in the trucks package log, get its information
             for pkg_track in pkg_truck_run1.packages:
-                pkg_get(pkg_track, datetime.timedelta(hours=int(hour), minutes=int(min), seconds=int(sec)))
+                pkg_get(pkg_track, datetime.timedelta(hours=int(h), minutes=int(m), seconds=int(s)))
             print('\n2nd truck: ' + str(pkg_truck_run2.total_distance) + ' miles of distance traveled ')
             # print package header
             pkg_info_printer()
             # For each package in the trucks package log, get its information
             for pkg_track in pkg_truck_run2.packages:
-                pkg_get(pkg_track, datetime.timedelta(hours=int(hour), minutes=int(min), seconds=int(sec)))
+                pkg_get(pkg_track, datetime.timedelta(hours=int(h), minutes=int(m), seconds=int(s)))
             print('\n3rd truck: ' + str(pkg_truck_run3.total_distance) + ' miles of distance traveled ')
             # print package header
             pkg_info_printer()
             # For each package in the trucks package log, get its information
             for pkg_track in pkg_truck_run3.packages:
-                pkg_get(pkg_track, datetime.timedelta(hours=int(hour), minutes=int(min), seconds=int(sec)))
+                pkg_get(pkg_track, datetime.timedelta(hours=int(h), minutes=int(m), seconds=int(s)))
 
         # Exits the program
         elif option == '4':
             print('\nThe program will now exit')
             exit()
+
         # If 1-4 is not chosen as an option, gives user an error message
         else:
             print('\nInvalid option chosen. Please try again')
