@@ -200,7 +200,7 @@ def delivery_function(truck):
         # Remove the package from the temporary list as it will no longer need to be sorted
         sorting_list.remove(pkg_near)
         # Truck will now head to the nearest delivery address
-        pkg_near.depart = truck.truck_depart
+        pkg_near.leave_time = truck.truck_depart
         # The trucks current address is the package delivery address
         truck.addr_now = pkg_near.address
         # Add the miles traveled by the truck to the running total
