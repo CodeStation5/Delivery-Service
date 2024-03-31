@@ -1,4 +1,3 @@
-
 # Holds the class information for packages
 class Package:
     def __init__(self, package, address, city, state, postal_code, deadline, comment,
@@ -23,10 +22,11 @@ class Package:
         # If the package is in a truck before the current time, it's on track to be delivered
         elif self.leave_time < cur_time:
             self.package_state = 'Out for delivery'
+        # Otherwise the package is still at the center and not on a vehicle
         # Error check placeholder
         elif self.leave_time > 9999999:
             self.package_state = 'ERROR'
-        # Otherwise the package is still at the center and not on a vehicle
+        # If no other option then package is still at hub waiting to ship
         else:
             self.package_state = 'Awaiting shipping'
 
