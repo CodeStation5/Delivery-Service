@@ -116,7 +116,7 @@ def pkg_on_truck():
     for pkg_holder in packages:
         # If 9:05 delay, then ship on 2nd truck
         if pkg_holder.comment == '905delay':
-            pkg_truck2.append(pkg_holder)
+            pkg_truck3.append(pkg_holder)
         # If delayed due to label error then ship on 3rd truck (last)
         elif pkg_holder.comment == 'delay_again':
             pkg_truck3.append(pkg_holder)
@@ -207,8 +207,8 @@ def delivery_function(truck):
         truck.addr_now = pkg_near.address
         # Add the miles traveled by the truck to the running total
         truck.total_distance += int(addr_near)
-        # Package and truck will have the same times implying delivery
-        truck.truck_depart += datetime.timedelta(hours=addr_near / 18)
+        # Package and truck will have the same times implying delivery / original 18 not 10
+        truck.truck_depart += datetime.timedelta(hours=addr_near / 10)
         # Trucks leave time from location is when the package is delivered
         pkg_near.deliver_time = truck.truck_depart
 
