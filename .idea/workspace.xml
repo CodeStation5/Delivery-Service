@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5256cc32-93fc-442a-8600-7e64a34e9c44" name="Changes" comment="edited dataset files for clarity">
+    <list default="true" id="5256cc32-93fc-442a-8600-7e64a34e9c44" name="Changes" comment="changed nearest address distance from float to int">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/New folder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/New folder/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/New folder/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/New folder/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +58,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.Hashtable.executor": "Run",
+    "Python.Main.executor": "Run",
     "Python.Package.executor": "Run",
     "Python.Truck.executor": "Run",
     "Python.main.executor": "Run",
@@ -90,7 +92,10 @@
       <workItem from="1707999701732" duration="641000" />
       <workItem from="1708000351950" duration="166000" />
       <workItem from="1708216331220" duration="35000" />
-      <workItem from="1711521168151" duration="34926000" />
+      <workItem from="1711521168151" duration="38268000" />
+      <workItem from="1712283075957" duration="144000" />
+      <workItem from="1712370467868" duration="1651000" />
+      <workItem from="1712603610363" duration="821000" />
     </task>
     <task id="LOCAL-00001" summary="Added base files">
       <option name="closed" value="true" />
@@ -308,15 +313,29 @@
       <option name="project" value="LOCAL" />
       <updated>1711874769971</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="minor text changes">
+      <option name="closed" value="true" />
+      <created>1711875337722</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1711875337722</updated>
+    </task>
+    <task id="LOCAL-00029" summary="changed nearest address distance from float to int">
+      <option name="closed" value="true" />
+      <created>1711904045585</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1711904045585</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added refactored code" />
-    <MESSAGE value="Add wgu source code for hash table" />
     <MESSAGE value="Add error check to pkg state" />
     <MESSAGE value="renamed distance to total_distance, reflect main.py" />
     <MESSAGE value="rename class objects to be clearer" />
@@ -340,10 +359,13 @@
     <MESSAGE value="renamed time variables" />
     <MESSAGE value="commented out elif error for time outside range" />
     <MESSAGE value="edited dataset files for clarity" />
-    <option name="LAST_COMMIT_MESSAGE" value="edited dataset files for clarity" />
+    <MESSAGE value="minor text changes" />
+    <MESSAGE value="changed nearest address distance from float to int" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed nearest address distance from float to int" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Delivery_Service$main.coverage" NAME="main Coverage Results" MODIFIED="1711875291436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Delivery_Service$Main.coverage" NAME="Main Coverage Results" MODIFIED="1712604348214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Delivery_Service$main.coverage" NAME="main Coverage Results" MODIFIED="1712371812870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Delivery_Service$Hashtable.coverage" NAME="Hashtable Coverage Results" MODIFIED="1711785075461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Delivery_Service$Package.coverage" NAME="Package Coverage Results" MODIFIED="1711874816940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Delivery_Service$Truck.coverage" NAME="Truck Coverage Results" MODIFIED="1711785069870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

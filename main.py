@@ -74,6 +74,13 @@ def pkg_loader(pkg_hashtable):
 # Collect information about the package to get details on its status
 def pkg_get(pkg_track, cur_time=datetime.timedelta(hours=17)):
     package = pkg_hashtable.search(pkg_track)
+    # Update package 9's address based on user input time
+    if pkg_track == 9 and cur_time < datetime.timedelta(hours=10, minutes=20):
+        package.address = "300 State St"
+        package.postal_code = 84103
+    elif pkg_track == 9 and cur_time >= datetime.timedelta(hours=10, minutes=20):
+        package.address = "410 S. State St"
+        package.postal_code = 84111
     package.set_pkg_state(cur_time)
     print(str(package))
 
